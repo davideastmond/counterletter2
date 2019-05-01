@@ -1,14 +1,13 @@
 function countLetters(input) {
-  let input1 = input.split(' ').join('');
+  input = input.split(' ').join('');
   let obj = new Object
-  for (let i = 0; i < input1.length; i++) {
-    let character = input1.charAt(i);
+  for (let i = 0; i < input.length; i++) {
+    let character = input.charAt(i);
     if (obj[character]) {
       obj[character].push(i);
     } else {
       obj[character] = [i];
     }
-
   }
   return obj;
 }
